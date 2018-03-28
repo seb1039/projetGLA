@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Eventually by HTML5 UP</title>
+		<title>Projet GLA</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,17 +14,26 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Eventually</h1>
-				<p>A simple template for telling the world when you'll launch<br />
-				your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p>
+				<div class="menu-nav">
+					<a href="https://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a> here
+				</div>
+				<h1>Projet GLA</h1>
+				<button id="open">Open</button>
 			</header>
 
-		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
+			<div class="container">
+			<form class="form" method="post" action="#">
+					<label>Non :</label>
+					<input type="text" name="dname" id="name">
+					<label>Email :</label>
+					<input type="text" name="demail" id="email">
+					<label>Mot de passe :</label>
+					<input type="password" name="password" id="password">
+					<label>Confirmation de mot de passe :</label>
+					<input type="password" name="cpassword" id="cpassword">
+					<input type="button" name="register" id="register" value="Register">
 			</form>
-
+		</div>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
@@ -34,7 +43,7 @@
 					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; Untitled.</li><li>Credits: </li>
 				</ul>
 			</footer>
 
@@ -42,5 +51,6 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="JQuery/jquery-3.3.1.js"></script>
       <script src ="leaflet/leaflet.js"></script>
+			<script src="assets/js/main.js"></script>
 	</body>
 </html>
