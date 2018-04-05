@@ -19,29 +19,6 @@ import com.group3.jetty_jersey.entity.User;
 
 @Path("/user")
 public class UserService {
-	UserDao userDao = new UserDao("test");
-	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes("application/x-www-form-urlencoded")
-	@Path("login")	
-	public String login(@FormParam("id") String userid,@FormParam("pwd") String userpwd) throws Exception{
-		
-			System.out.println(userid+"======="+userpwd);
-			if (userid==null||userpwd==null) {
-				String json="{\"result\":\"error\"}";
-				System.out.println(json);
-				return json;
-			}else{
-				String userResult=userDao.getByID(userid);
-				if (userResult==null) {
-					String testR="{\"result\":\"account or password incorrect :(\"}";
-					return testR;
-				}
-
-		String testR="{\"result\":\"login error500\"}";
-		return testR;
-			}
-
-		
-	}
+	
+	
 }

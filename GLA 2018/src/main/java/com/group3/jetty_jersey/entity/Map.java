@@ -4,32 +4,37 @@ import java.util.List;
 
 public class Map {
 
-	private long id_map;
 	private String name;
-	private List<String> categories;
+	private boolean privacy;
 	
 	
-	public long getId_map() {
-		return id_map;
+	public Map(String name, boolean privacy) {
+		super();
+		this.name = name;
+		this.privacy = privacy;
 	}
-	public void setId_map(long id_map) {
-		this.id_map = id_map;
+	
+	public Map()
+	{
+		name="";
+		privacy=false;
 	}
-	
-	
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public List<String> getCategories() {
-		return categories;
-	}
-	public void setCategories(List<String> categories) {
-		this.categories = categories;
-	}
-	
 
+	public boolean isPrivacy() {
+		return privacy;
+	}
+
+	public void setPrivacy(boolean privacy) {
+		this.privacy = privacy;
+	}
+	
+	
 }
