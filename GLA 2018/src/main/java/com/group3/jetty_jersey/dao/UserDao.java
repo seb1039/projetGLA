@@ -6,6 +6,8 @@ import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilder;
 
+import com.group3.jetty_jersey.entity.User;
+
 
 
 public class UserDao extends BasicDao {
@@ -17,11 +19,13 @@ public class UserDao extends BasicDao {
 	}
 	
 	
-	public String add(String username,String pwd,String bD,String email,String ln,String fn,String gender) throws Exception 
+	public String add(User user) throws Exception 
 	{
 		TransportClient client=getClient();          
-	    String json = "{\"user_name\":\""+ username+"\",\"password\":\""+pwd+"\",\"birthDate\":\""+bD+
-	    		"\",\"email\":\""+email+"\",\"lastName\":\""+ln+"\",\"firstName\":\""+fn+"\",\"gender\":\""+gender+"\"}";          
+	    String json = "{\"user_name\":\""+ user.getUser_name()+"\",\"password\":\""+user.getPassword()+
+	    		"\",\"birthDate\":\""+user.getBirthDate()+"\",\"email\":\""+user.getEmail()+
+	    		"\",\"lastName\":\""+user.getLastName()+"\",\"firstName\":\""+user.getFirstName()+
+	    		"\",\"gender\":\""+user.getGender()+"\"}";          
 	    IndexResponse response = client.prepareIndex("user", "_doc","1").setSource(json, XContentType.JSON).get();
 
 	    return response.status().toString();    
