@@ -33,10 +33,8 @@ public abstract class BasicDao {
 	
 			if (serverAddr1==null) {serverAddr1="localhost";}
 			Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
-			System.out.println("blabla");
 		    client = new PreBuiltTransportClient(settings);
 			client.addTransportAddress(new TransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));
-		    System.out.println("blabla5");
 
 		
 		return client;
