@@ -14,9 +14,6 @@ import com.group3.jetty_jersey.entity.User;
 
 
 
-
-
-
 public class UserDao extends BasicDao {
 	
 	
@@ -44,9 +41,21 @@ public class UserDao extends BasicDao {
 		return response.getSourceAsString();
 	}
 	
+	public String getByID(String id) throws Exception {
+		TransportClient client=getClient();
+		GetResponse response=client.prepareGet("user", "_doc",id).get();
+		return response.getSourceAsString();
+	}
+	
 	public String delete(User user) throws Exception {
 		TransportClient client=getClient();
 		DeleteResponse response=client.prepareDelete("user","_doc", ""+user.getId_user()).get();
+		return response.status().toString();
+	}
+	
+	public String delete(String id) throws Exception {
+		TransportClient client=getClient();
+		DeleteResponse response=client.prepareDelete("user","_doc",id).get();
 		return response.status().toString();
 	}
 
@@ -55,10 +64,7 @@ public class UserDao extends BasicDao {
 		return null;
 	}
 
-	public String delete(String id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 
 	public void update(String id, String attribut, String valeur) throws Exception {
@@ -77,9 +83,5 @@ public class UserDao extends BasicDao {
 		return null;
 	}
 
-	public String getByID(String id) throws Exception {
-		// TODO Auto-generated method stub
-		return "test";
-	}
 
 }
