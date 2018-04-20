@@ -6,6 +6,7 @@
 	}
 	#pm_menu.pm_open{
 		left: 0px;
+		visibility: visible;
 		-webkit-animation: backSlideIn .5s both ease;
 		-moz-animation: backSlideIn .5s both ease;
 		animation: backSlideIn .5s both ease;
@@ -27,7 +28,7 @@
 	.pm_overlay.pm_show{
 		display: block;
 		-webkit-animation: fadeIn .3s both ease;
-		-moz-animation: fadeIn .3s both ease;
+		-moz-animation: fadeIn 3s both ease;
 		animation: fadeIn .3s both ease;
 	}
 	.pm_overlay.pm_hide{
