@@ -12,21 +12,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }
 ).addTo(test);
 
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
-
 /*
 
 */
 (function($) {
-	$(function() {
-		$('[data-toggle="popover"]').popover({
-        	html: true,
-        	content: function() {
-        		return $('#popover-content').html();
-        	}
-  		});
-	});
 })
 (jQuery);

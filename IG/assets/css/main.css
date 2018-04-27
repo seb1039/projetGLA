@@ -1,6 +1,10 @@
 #defaultmap{
 	height: 100%;
 	width: 100%;
+	min-height: 60vh;
+	margin-left: 1pc;
+	margin-right: 2pc;
+	padding-right: 2pc;
 }
 
 #mappage{
@@ -17,8 +21,70 @@
 	padding-left: 5pc;
 	padding-right: 2pc;
 	margin-left: 1pc;
-	margin-right: 1pc;
-	
+	margin-right: 1pc;	
+}
+
+#evenements{
+	display: all
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-left: 1pc;
+	margin-right: 1pc;	
+	margin-bottom: 1pc;
+	overflow: hidden;
+
+}
+/*
+#tableEvent{
+	position: absolute;
+	height: all;
+	overflow-y: scroll;
+}
+/*
+.h-scroll{
+	height: 90vw;
+	position: fixed;
+	overflow-y: scroll;
+}
+*/
+
+.table-fixed thead {
+  width: auto;
+}
+.table-fixed tbody {
+	height: 80vh;
+	overflow-y: auto;
+	width: 100%;
+	right: 0;
+	padding-right: 0;
+	margin-right: 0;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed td, .table-fixed th {
+	display: block;
+}
+
+.table-fixed tbody{
+	right: 0;
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.table-fixed tr{
+	width: 150%;
+	right: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.table-evenement th {
+	width: 25vh;
+}
+
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
 }
 
 html,body{
@@ -37,4 +103,8 @@ footer{
 	left: 0;
 	bottom: 0;
 	width: 100%;
+}
+
+form{
+	margin-right: 2pc;
 }
